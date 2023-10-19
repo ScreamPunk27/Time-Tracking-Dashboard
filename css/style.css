@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+:root{
+    /*Primary*/
+
+    --blue:hsl(246, 80%, 60%);
+
+    --lightRed-work:hsl(15, 100%, 70%);
+    --softBlue-play:hsl(195, 74%, 62%);
+    --lightRed-study:hsl(348, 100%, 68%);
+    --limeGreen-exercise: hsl(145, 58%, 55%);
+    --violet-social: hsl(264, 64%, 52%);
+    --softOrange-selfcare: hsl(43, 84%, 65%);
+
+    /*Neutral*/
+
+    --veryDarkBlue: hsl(226, 43%, 10%);  
+    --darkBlue: hsl(235, 46%, 20%);
+    --desaturatedBlue: hsl(235, 45%, 61%);
+    --paleBlue: hsl(236, 100%, 87%);
+}
+
+*{
+    margin:0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik',sans-serif;
+}
+
+body{
+    background-color: var(--veryDarkBlue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.dashboard{
+    width: 90%;
+    margin-top: 3rem;
+}
+
+.dashboard__left{
+   background: var(--darkBlue);
+   background-size: 80%;
+   border-radius: 12px 12px 10px 10px;
+}
+
+.person{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    background: var(--blue);
+    border-radius: 12px;
+}
+
+.person-img{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.person-img img{
+    height: 100%;
+    width: 100%;
+}
+
+.person-info{
+    margin-left: 1rem;
+}
+
+.person-info p{
+    color: var(--paleBlue);
+    font-size: .9rem;
+}
+
+.person-info h1{
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.options{
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--darkBlue);
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
+}
+
+.options li{
+    list-style: none;
+}
+
+.options li a {
+    text-decoration: none;
+    color: var(--desaturatedBlue);
+}
+
+#week-a:hover{
+    color: #fff;
+}
+
+
+
+
+.container{
+    margin: 1rem 0;
+    padding-top: 2rem;
+    border-radius: 12px;
+}
+
+.work{
+    background: var(--lightRed-work);
+    background-image: url('../images/icon-work.svg');
+}
+
+.play{
+    background: var(--softBlue-play);
+    background-image: url('../images/icon-play.svg');
+}
+
+.study{
+    background: var(--lightRed-study);
+    background-image: url('../images/icon-study.svg');
+}
+
+.exercise{
+    background: var(--limeGreen-exercise);
+    background-image: url('../images/icon-exercise.svg');
+}
+
+.social{
+    background: var(--violet-social);
+    background-image: url('../images/icon-social.svg');
+}
+
+.self{
+    background: var(--softOrange-selfcare);
+    background-image: url('../images/icon-self-care.svg');
+}
+
+.work,.play,.study,.exercise,.social,.self{
+    background-repeat: no-repeat;
+    background-position-x: 90%;
+    background-position-y: -10px;
+    background-size:60px;
+}
+
+.activity{
+    padding: 1rem;
+    background-color: var(--darkBlue);
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.activity:hover:not(.ellipsis-img){
+    filter: brightness(170%);
+}
+
+
+.activity__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.activity__top p{
+    color: #fff;
+    font-weight: 500;
+}
+
+.activity__bottom h1{
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: .5rem;
+}
+
+.activity__bottom p{
+    color: var(--desaturatedBlue);
+}
+
+@media screen and (min-width:800px){
+    .dashboard__right{
+        display: grid;
+        grid-template-columns: repeat(3,minmax(185px,1fr));
+        gap: 1.5rem;
+    }
+
+    .container{
+        margin: 0;
+    }
+}
+
+
+@media screen and (min-width:900px){
+    .dashboard{
+        display: flex;
+        width: auto;
+        height: 400px;
+    }
+
+    .dashboard__left{
+        height: 100%;
+        width: 25%;
+        margin-right: 1.5rem;
+    }
+
+    .dashboard__right{
+        width: 75%;
+    }
+
+    .person{
+        display: block;
+        height: 70%;
+        padding: 1rem;
+    }
+
+    .person-img{
+        height: 60px;
+        width: 60px;
+        margin-bottom: 2rem;
+    }
+
+    .person-info{
+        margin-left: 0;
+    }
+
+    .person-info h1{
+        font-size: 2rem;
+    }
+
+    .options{
+        display: block;
+        height: 30%;
+    }
+
+    .options li:nth-child(2){
+        margin: 1rem 0;
+    }
+       
+    
+}

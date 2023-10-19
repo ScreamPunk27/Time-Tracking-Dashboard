@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; margin-top: .5rem; color: #fff;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <div class="dashboard">
+    <div class="dashboard__left">
+      <div class="person">
+        <div class="person-img">
+          <img src="images/image-jeremy.png" alt="" srcset="">
+        </div>
+        <div class="person-info">
+          <p>Report for</p>
+          <h1>Jeremy Robson</h1>
+        </div>
+      </div>
+      <div class="options">
+        <li><a href="#" id="day-a">Daily</a></li>
+        <li><a href="#" id="week-a">Weekly</a></li>
+        <li><a href="#" id="month-a">Monthly</a></li>
+      </div>
+    </div>
+
+    <div class="dashboard__right">
+      <div class="container work">
+        <div class="activity">
+          <div class="activity__top">
+            <p>Work</p>
+            <img src="images/icon-ellipsis.svg" alt="" srcset="" class="ellipsis-img">
+          </div>
+          <div class="activity__bottom">
+            <h1><span id="hrs-work"></span>hrs</h1>
+            <p>Last <span class="time"></span> - <span id="lasthrs-work"></span>hrs</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container play">
+        <div class="activity">
+          <div class="activity__top">
+            <p>Play</p>
+            <img src="images/icon-ellipsis.svg" alt="" srcset="" class="ellipsis-img">
+          </div>
+          <div class="activity__bottom">
+            <h1><span id="hrs-play"></span>hrs</h1>
+            <p>Last <span class="time"></span> - <span id="lasthrs-play"></span>hrs</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container study">
+        <div class="activity">
+          <div class="activity__top">
+            <p>Study</p>
+            <img src="images/icon-ellipsis.svg" alt="" srcset="" class="ellipsis-img">
+          </div>
+          <div class="activity__bottom">
+            <h1><span id="hrs-study"></span>hrs</h1>
+            <p>Last <span class="time"></span> - <span id="lasthrs-study"></span>hrs</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container exercise">
+        <div class="activity">
+          <div class="activity__top">
+            <p>Exercise</p>
+            <img src="images/icon-ellipsis.svg" alt="" srcset="" class="ellipsis-img">
+          </div>
+          <div class="activity__bottom">
+            <h1><span id="hrs-exercise"></span>hrs</h1>
+            <p>Last <span class="time"></span> - <span id="lasthrs-exercise"></span>hrs</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container social">
+        <div class="activity">
+          <div class="activity__top">
+            <p>Social</p>
+            <img src="images/icon-ellipsis.svg" alt="" srcset="" class="ellipsis-img">
+          </div>
+          <div class="activity__bottom">
+            <h1><span id="hrs-social"></span>hrs</h1>
+            <p>Last <span class="time"></span> - <span id="lasthrs-social"></span>hrs</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container self">
+        <div class="activity">
+          <div class="activity__top">
+            <p>Self Care</p>
+            <img src="images/icon-ellipsis.svg" alt="" srcset="" class="ellipsis-img">
+          </div>
+          <div class="activity__bottom">
+            <h1><span id="hrs-self"></span>hrs</h1>
+            <p>Last <span class="time"></span> - <span id="lasthrs-self"></span>hrs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">ScreamPunk27</a>.
+  </div>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
